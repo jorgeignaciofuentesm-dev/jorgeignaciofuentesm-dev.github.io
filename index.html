@@ -312,6 +312,32 @@ background-color: var(--color-red);
 border-radius: 2px;
 }
 .more-content .grid { margin-bottom: 0; }
+/* Afiches de eventos: sube la imagen al repositorio con el nombre indicado en src */
+.poster {
+position: relative;
+aspect-ratio: 3 / 4;
+border: 2px dashed #CCCCCC;
+border-radius: 4px;
+background-color: #F7F7F7;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 8px;
+margin-bottom: 15px;
+overflow: hidden;
+color: #999999;
+font-size: 0.85rem;
+}
+.poster i { font-size: 1.8rem; }
+.poster img {
+position: absolute;
+inset: 0;
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+.poster.loaded { border: none; }
 .cv-list {
 list-style: none;
 }
@@ -654,6 +680,35 @@ My current research looks at what happens when the human brain and neurotechnolo
 <i class="fa-solid fa-arrow-up-right-from-square"></i>
 <span lang="es">Leer entrada</span><span lang="en">Read post</span>
 </a>
+</div>
+</div>
+</div>
+
+<!-- Organización de eventos académicos -->
+<h3><i class="fa-solid fa-calendar-days"></i> <span lang="es">Organización de Eventos Académicos</span><span lang="en">Organized Academic Events</span></h3>
+<div class="grid">
+<div class="card">
+<div class="card-content">
+<div class="poster">
+<i class="fa-regular fa-image"></i>
+<span><span lang="es">Afiche</span><span lang="en">Poster</span></span>
+<img src="afiche-clase-ienca.jpg" alt="Afiche clase pública Marcello Ienca" onload="this.parentElement.classList.add('loaded')" onerror="this.remove()">
+</div>
+<p class="date"><span lang="es">26 de noviembre de 2026 · 16:00 h</span><span lang="en">November 26, 2026 · 4:00 p.m.</span></p>
+<h3><span lang="es">Clase pública</span><span lang="en">Public Lecture</span>: Neurorights, Ten Years Later: What Have We Learned—and What Comes Next?</h3>
+<p><span lang="es">Clase de Marcello Ienca, presidente de la International Neuroethics Society. Auditorio del Edificio Académico de la Facultad de Medicina, Pontificia Universidad Católica de Chile. Actividad del Proyecto FONDECYT de Iniciación N.º 11250331.</span><span lang="en">Lecture by Marcello Ienca, President of the International Neuroethics Society. Auditorium of the Academic Building, Faculty of Medicine, Pontificia Universidad Católica de Chile. Activity of FONDECYT Initiation Grant No. 11250331.</span></p>
+</div>
+</div>
+<div class="card">
+<div class="card-content">
+<div class="poster">
+<i class="fa-regular fa-image"></i>
+<span><span lang="es">Afiche</span><span lang="en">Poster</span></span>
+<img src="afiche-workshop-neuroethics-chile.jpg" alt="Afiche workshop Neuroethics in Chile" onload="this.parentElement.classList.add('loaded')" onerror="this.remove()">
+</div>
+<p class="date"><span lang="es">27 de noviembre de 2026 · 09:30 – 17:00 h</span><span lang="en">November 27, 2026 · 9:30 a.m. – 5:00 p.m.</span></p>
+<h3>Workshop: Neuroethics in Chile</h3>
+<p><span lang="es">Jornada que reúne a distintas voces de la neuroética en Chile e incluye la conferencia de Marcello Ienca “Who Owns the Mind? Neurorights from a Philosophical Idea to Global Governance”. Auditorio de Filosofía, Campus San Joaquín UC. Actividad del Proyecto FONDECYT de Iniciación N.º 11250331.</span><span lang="en">A workshop bringing together different voices in Chilean neuroethics, including Marcello Ienca’s lecture “Who Owns the Mind? Neurorights from a Philosophical Idea to Global Governance”. Philosophy Auditorium, San Joaquín Campus, Pontificia Universidad Católica de Chile. Activity of FONDECYT Initiation Grant No. 11250331.</span></p>
 </div>
 </div>
 </div>
