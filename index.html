@@ -8,10 +8,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
 :root {
---nintendo-red: #E60012;
---nintendo-dark: #1F1F1F;
---nintendo-light: #F2F2F2;
---nintendo-white: #FFFFFF;
+--color-red: #E60012;
+--color-dark: #1F1F1F;
+--color-light: #F2F2F2;
+--color-white: #FFFFFF;
 --text-dark: #333333;
 --text-muted: #666666;
 }
@@ -22,14 +22,14 @@ padding: 0;
 }
 body {
 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-background-color: var(--nintendo-light);
+background-color: var(--color-light);
 color: var(--text-dark);
 line-height: 1.6;
 }
-/* Barra de navegación superior estilo Switch */
+/* Barra de navegación superior */
 header {
-background-color: var(--nintendo-red);
-color: var(--nintendo-white);
+background-color: var(--color-red);
+color: var(--color-white);
 position: sticky;
 top: 0;
 z-index: 1000;
@@ -50,7 +50,7 @@ letter-spacing: 1px;
 text-transform: uppercase;
 }
 nav a {
-color: var(--nintendo-white);
+color: var(--color-white);
 text-decoration: none;
 margin-left: 20px;
 font-weight: 600;
@@ -62,8 +62,8 @@ opacity: 0.8;
 }
 /* Botón selector de idioma */
 .lang-btn {
-background-color: var(--nintendo-dark);
-color: var(--nintendo-white);
+background-color: var(--color-dark);
+color: var(--color-white);
 border: none;
 padding: 6px 14px;
 border-radius: 20px;
@@ -84,8 +84,8 @@ padding: 0 20px;
 }
 /* Sección Sobre Mí (Hero) */
 .hero {
-background-color: var(--nintendo-white);
-border-left: 8px solid var(--nintendo-red);
+background-color: var(--color-white);
+border-left: 8px solid var(--color-red);
 border-radius: 4px;
 padding: 30px;
 margin-bottom: 40px;
@@ -93,12 +93,12 @@ box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 .hero h1 {
 font-size: 2.2rem;
-color: var(--nintendo-dark);
+color: var(--color-dark);
 margin-bottom: 5px;
 }
 .hero .subtitle {
 font-size: 1.1rem;
-color: var(--nintendo-red);
+color: var(--color-red);
 font-weight: 600;
 margin-bottom: 15px;
 }
@@ -109,7 +109,7 @@ padding-top: 20px;
 }
 section h2 {
 font-size: 1.5rem;
-color: var(--nintendo-dark);
+color: var(--color-dark);
 margin-bottom: 20px;
 display: flex;
 align-items: center;
@@ -119,7 +119,7 @@ section h2::after {
 content: '';
 flex-grow: 1;
 height: 3px;
-background-color: var(--nintendo-red);
+background-color: var(--color-red);
 border-radius: 2px;
 }
 /* Cuadrícula de Tarjetas (Cards Grid) */
@@ -131,7 +131,7 @@ margin-bottom: 20px;
 }
 /* Estilo de Tarjetas */
 .card {
-background-color: var(--nintendo-white);
+background-color: var(--color-white);
 border: 2px solid #E0E0E0;
 border-radius: 6px;
 padding: 25px;
@@ -143,16 +143,16 @@ box-shadow: 0 2px 4px rgba(0,0,0,0.02);
 }
 .card:hover {
 transform: translateY(-4px);
-border-color: var(--nintendo-red);
+border-color: var(--color-red);
 }
 .card-content h3 {
 font-size: 1.2rem;
-color: var(--nintendo-dark);
+color: var(--color-dark);
 margin-bottom: 10px;
 }
 .card-content .date {
 font-size: 0.85rem;
-color: var(--nintendo-red);
+color: var(--color-red);
 font-weight: 600;
 margin-bottom: 10px;
 text-transform: uppercase;
@@ -162,13 +162,13 @@ color: var(--text-muted);
 font-size: 0.95rem;
 margin-bottom: 15px;
 }
-/* Botones estilo Nintendo dentro de las tarjetas */
+/* Botones dentro de las tarjetas */
 .card-action a, .cv-btn {
 display: inline-flex;
 align-items: center;
 gap: 8px;
-background-color: var(--nintendo-dark);
-color: var(--nintendo-white);
+background-color: var(--color-dark);
+color: var(--color-white);
 text-decoration: none;
 padding: 8px 16px;
 border-radius: 4px;
@@ -179,12 +179,12 @@ border: none;
 cursor: pointer;
 }
 .card-action a:hover, .cv-btn:hover {
-background-color: var(--nintendo-red);
+background-color: var(--color-red);
 }
 /* Fila de descarga de CV */
 .cv-box {
-background-color: var(--nintendo-dark);
-color: var(--nintendo-white);
+background-color: var(--color-dark);
+color: var(--color-white);
 padding: 25px;
 border-radius: 6px;
 display: flex;
@@ -193,14 +193,14 @@ align-items: center;
 flex-wrap: wrap;
 gap: 15px;
 }
-.cv-text h3 { color: var(--nintendo-white); margin-bottom: 5px;}
+.cv-text h3 { color: var(--color-white); margin-bottom: 5px;}
 .cv-text p { color: #BBB; font-size: 0.9rem; }
 .cv-box .cv-btn {
-background-color: var(--nintendo-red);
+background-color: var(--color-red);
 }
 .cv-box .cv-btn:hover {
-background-color: var(--nintendo-white);
-color: var(--nintendo-dark);
+background-color: var(--color-white);
+color: var(--color-dark);
 }
 
 /* Foto de perfil */
@@ -210,7 +210,7 @@ width: 170px;
 height: 170px;
 object-fit: cover;
 border-radius: 50%;
-border: 5px solid var(--nintendo-red);
+border: 5px solid var(--color-red);
 margin: 0 0 15px 25px;
 }
 .hero::after { content: ""; display: block; clear: both; }
@@ -284,11 +284,20 @@ My current research looks at what happens when the human brain and neurotechnolo
 </h2>
 <div class="grid">
 
+<!-- Authorship as a Distinct Ethical Dimension in Speech BCIs -->
+<div class="card">
+<div class="card-content">
+<p class="date"><span lang="es">Próximamente</span><span lang="en">Forthcoming</span> · Neuroethics</p>
+<h3>Authorship as a Distinct Ethical Dimension in Speech BCIs</h3>
+<p>Fuentes, J. I., Burdman, F., &amp; Wajnerman-Paz, A. <em>Neuroethics</em>.</p>
+</div>
+</div>
+
 <!-- A mechanistic account of physical computation -->
 <div class="card">
 <div class="card-content">
-<p class="date"><span lang="es">En prensa</span><span lang="en">In press</span> · Oxford University Press</p>
-<h3>A mechanistic account of physical computation</h3>
+<p class="date"><span lang="es">Próximamente</span><span lang="en">Forthcoming</span> · Oxford University Press</p>
+<h3>A Mechanistic Account of Physical Computation</h3>
 <p>Fuentes, J. I., &amp; Piccinini, G. In <em>Oxford Handbook of Philosophy of Computer Science</em>. R. Turner, N. Angius &amp; H. Stephanou (eds.). Oxford University Press.</p>
 </div>
 </div>
@@ -357,7 +366,7 @@ My current research looks at what happens when the human brain and neurotechnolo
 <div class="card">
 <div class="card-content">
 <p class="date">2024 · Revista de Filosofía</p>
-<h3>El rol de la agencia en la identidad híbrida de los pacientes neurotecnológicos</h3>
+<h3>El Rol de la Agencia en la Identidad Híbrida de los Pacientes Neurotecnológicos</h3>
 <p>Fuentes, J. I., &amp; Wajnerman Paz, A. <em>Revista de Filosofía</em>, 81, 225–251.</p>
 </div>
 <div class="card-action">
@@ -372,7 +381,7 @@ My current research looks at what happens when the human brain and neurotechnolo
 <div class="card">
 <div class="card-content">
 <p class="date">2024 · Synthese</p>
-<h3>Computational systems as higher-order mechanisms</h3>
+<h3>Computational Systems as Higher-Order Mechanisms</h3>
 <p>Fuentes, J. I. <em>Synthese</em>, 203(2), 55.</p>
 </div>
 <div class="card-action">
@@ -387,7 +396,7 @@ My current research looks at what happens when the human brain and neurotechnolo
 <div class="card">
 <div class="card-content">
 <p class="date">2023 · Philosophical Psychology</p>
-<h3>Efficient mechanisms</h3>
+<h3>Efficient Mechanisms</h3>
 <p>Fuentes, J. I. <em>Philosophical Psychology</em>.</p>
 </div>
 <div class="card-action">
@@ -414,8 +423,8 @@ My current research looks at what happens when the human brain and neurotechnolo
 
 <div class="card">
 <div class="card-content">
-<p class="date"><span lang="es">En prensa</span><span lang="en">In press</span> · Tirant lo Blanch</p>
-<h3>Tecnologías biomédicas desde la perspectiva de la dignidad humana</h3>
+<p class="date"><span lang="es">Próximamente</span><span lang="en">Forthcoming</span> · Tirant lo Blanch</p>
+<h3>Tecnologías Biomédicas desde la Perspectiva de la Dignidad Humana</h3>
 <p><span lang="es">Fuentes, J. I., y Głos, A. (eds.). Libro editado. Tirant lo Blanch.</span><span lang="en">Fuentes, J. I., &amp; Głos, A. (eds.). Edited volume. Tirant lo Blanch.</span></p>
 </div>
 </div>
@@ -450,7 +459,7 @@ My current research looks at what happens when the human brain and neurotechnolo
 <div class="card">
 <div class="card-content">
 <p class="date">2025 – 2028</p>
-<h3>A conceptual neuroethics approach to the interaction between neural computation and artificial computation: implications for personal identity and agency</h3>
+<h3>A Conceptual Neuroethics Approach to the Interaction between Neural Computation and Artificial Computation: Implications for Personal Identity and Agency</h3>
 <p lang="es">Investigador Responsable. FONDECYT de Iniciación N° 11250331 (abril 2025 – marzo 2028).</p>
 <p lang="en">Principal Investigator. FONDECYT Initiation Grant No. 11250331 (April 2025 – March 2028).</p>
 </div>
@@ -459,7 +468,7 @@ My current research looks at what happens when the human brain and neurotechnolo
 <div class="card">
 <div class="card-content">
 <p class="date">2025 – 2027</p>
-<h3>Tecnologías biomédicas desde la perspectiva de la dignidad humana</h3>
+<h3>Tecnologías Biomédicas desde la Perspectiva de la Dignidad Humana</h3>
 <p lang="es">Investigador Responsable. Proyecto UC de Investigación y Creación para Académicos, DPCC2024-102810.</p>
 <p lang="en">Principal Investigator. UC Research and Creation Project for Faculty, DPCC2024-102810.</p>
 </div>
@@ -467,10 +476,10 @@ My current research looks at what happens when the human brain and neurotechnolo
 
 <div class="card">
 <div class="card-content">
-<p class="date">2025</p>
-<h3>Reflexión ética en el cuidado a través de la simulación como herramienta en la formación integral de internos de enfermería</h3>
-<p lang="es">Coinvestigador. FONDEDOC UC 2025.</p>
-<p lang="en">Co-investigator. FONDEDOC UC 2025.</p>
+<p class="date">2026</p>
+<h3>Reflexión Ética en el Cuidado a través de la Simulación como Herramienta en la Formación Integral de Internos de Enfermería</h3>
+<p lang="es">Coinvestigador. FONDEDOC UC 2026.</p>
+<p lang="en">Co-investigator. FONDEDOC UC 2026.</p>
 </div>
 </div>
 
@@ -480,7 +489,8 @@ My current research looks at what happens when the human brain and neurotechnolo
 </main>
 
 <footer>
-<p>© 2026 Jorge Ignacio Fuentes</p>
+<p lang="es">Última actualización: noviembre de 2026</p>
+<p lang="en">Last updated: November 2026</p>
 </footer>
 
 <!-- Botón de idioma ES / EN -->
