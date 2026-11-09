@@ -267,6 +267,7 @@ footer a:hover { text-decoration: underline; }
 /* Barra desplegable "Ver más" */
 .more {
 margin-top: 30px;
+scroll-margin-top: 90px;
 background-color: var(--color-white);
 border: 2px solid #E0E0E0;
 border-radius: 6px;
@@ -399,6 +400,7 @@ nav a { margin-left: 0; margin: 0 10px; }
 <a href="#publications"><span lang="es">Publicaciones</span><span lang="en">Publications</span></a>
 <a href="#books"><span lang="es">Libros</span><span lang="en">Books</span></a>
 <a href="#projects"><span lang="es">Proyectos</span><span lang="en">Projects</span></a>
+<a href="#more"><span lang="es">Ver más</span><span lang="en">See more</span></a>
 <button class="lang-btn" id="langToggle">EN</button>
 </nav>
 </div>
@@ -435,27 +437,27 @@ My current research looks at what happens when the human brain and neurotechnolo
 </h2>
 <div class="grid">
 
-<!-- Authorship as a Distinct Ethical Dimension in Speech BCIs -->
-<div class="card">
-<div class="card-content">
-<p class="date"><span lang="es">Próximamente</span><span lang="en">Forthcoming</span> · Neuroethics</p>
-<h3>Authorship as a Distinct Ethical Dimension in Speech BCIs</h3>
-<p>Fuentes, J. I., Burdman, F., &amp; Wajnerman-Paz, A. <em>Neuroethics</em>.</p>
-</div>
-<div class="card-action">
-<a href="https://philpapers.org/archive/FUEAAA.pdf" target="_blank">
-<i class="fa-solid fa-file-pdf"></i>
-<span lang="es">Preprint gratuito</span><span lang="en">Free preprint</span>
-</a>
-</div>
-</div>
-
 <!-- A mechanistic account of physical computation -->
 <div class="card">
 <div class="card-content">
 <p class="date"><span lang="es">Próximamente</span><span lang="en">Forthcoming</span> · Oxford University Press</p>
 <h3>A Mechanistic Account of Physical Computation</h3>
 <p>Fuentes, J. I., &amp; Piccinini, G. In <em>Oxford Handbook of Philosophy of Computer Science</em>. R. Turner, N. Angius &amp; H. Stephanou (eds.). Oxford University Press.</p>
+</div>
+</div>
+
+<!-- Authorship as a Distinct Ethical Dimension in Speech BCIs -->
+<div class="card">
+<div class="card-content">
+<p class="date">2026 · Neuroethics</p>
+<h3>Authorship as a Distinct Ethical Dimension in Speech BCIs</h3>
+<p>Fuentes, J. I., Burdman, F., &amp; Wajnerman-Paz, A. <em>Neuroethics</em>, 19, 58.</p>
+</div>
+<div class="card-action">
+<a href="https://doi.org/10.1007/s12152-026-09684-y" target="_blank">
+<i class="fa-solid fa-arrow-up-right-from-square"></i>
+<span lang="es">Leer publicación</span><span lang="en">Read publication</span>
+</a>
 </div>
 </div>
 
@@ -656,10 +658,10 @@ My current research looks at what happens when the human brain and neurotechnolo
 </section>
 
 <!-- ============================================ -->
-<!-- SECCIÓN DESPLEGABLE: VER MÁS (no aparece en el menú superior) -->
+<!-- SECCIÓN DESPLEGABLE: VER MÁS -->
 <!-- Agrega el contenido dentro de <div class="more-content"> -->
 <!-- ============================================ -->
-<details class="more">
+<details class="more" id="more">
 <summary>
 <i class="fa-solid fa-plus"></i>
 <span lang="es">Ver más</span><span lang="en">See more</span>
@@ -726,7 +728,7 @@ My current research looks at what happens when the human brain and neurotechnolo
 <li><span><span lang="es">Editor asociado de</span><span lang="en">Associate Editor of</span> <a href="https://philosophyofbrains.com/" target="_blank">The Brain’s Blog</a> (2025–).</span></li>
 <li><span><span lang="es">Miembro del grupo de investigación</span><span lang="en">Member of the research group</span> <a href="https://neuroeticaba.org/profile?person=jorge" target="_blank">Neuroética Buenos Aires (NEBA)</a>.</span></li>
 <li><span><span lang="es">Miembro del grupo de investigación MindMU de la University of Missouri–Columbia.</span><span lang="en">Member of the MindMU research group at the University of Missouri–Columbia.</span></span></li>
-<li><span><span lang="es">Miembro de la Sociedad Chilena de Filosofía de las Ciencias (SOCHIFIC).</span><span lang="en">Member of the Chilean Society for Philosophy of Science (SOCHIFIC).</span></span></li>
+<li><span><span lang="es">Miembro de la</span><span lang="en">Member of the</span> <a href="https://www.sochific.cl/acerca-de/miembros" target="_blank"><span lang="es">Sociedad Chilena de Filosofía de las Ciencias (SOCHIFIC)</span><span lang="en">Chilean Society for Philosophy of Science (SOCHIFIC)</span></a>.</span></li>
 </ul>
 
 <!-- Exposiciones en eventos académicos -->
@@ -777,6 +779,15 @@ btn.addEventListener('click', () => {
   const en = document.body.classList.contains('lang-en');
   btn.textContent = en ? 'ES' : 'EN';
 });
+// Abrir "Ver más" al llegar desde el menú
+function openMore() {
+  if (location.hash === '#more') document.getElementById('more').open = true;
+}
+document.querySelector('nav a[href="#more"]').addEventListener('click', () => {
+  document.getElementById('more').open = true;
+});
+window.addEventListener('hashchange', openMore);
+openMore();
 </script>
 
 </body>
